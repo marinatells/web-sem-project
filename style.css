@@ -1,0 +1,286 @@
+body {
+	font-family: "Arial";
+	margin: 60px 100px 100px;
+	background-color: #000;
+	background-image: url(icon/light.png);
+	background-size: 200px;
+	background-position: 5% -90px;
+	background-repeat: no-repeat;
+	color: #fdf598;
+}
+
+@keyframes color {
+	0%,
+	100% {
+		border-color: #accc5f;
+	}
+	25% {
+		border-color: #fdc424;
+	}
+	50% {
+		border-color: #ff8a45;
+	}
+	75% {
+		border-color: #d45a5a;
+	}
+}
+@keyframes dvizh {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+@keyframes round {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes call {
+	0%,
+	100% {
+		transform: rotate(0deg);
+	}
+	7% {
+		transform: rotate(100deg);
+	}
+	15% {
+		transform: rotate(-50deg);
+	}
+	22% {
+		transform: rotate(50deg);
+	}
+	28% {
+		transform: rotate(0deg);
+	}
+	35% {
+		transform: rotate(35deg);
+	}
+	38% {
+		transform: rotate(10deg);
+	}
+	42% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes jump {
+	0% {
+		opacity: 0;
+		transform: translateY(0px);
+	}
+	40% {
+		opacity: 1;
+		transform: translateY(100px);
+	}
+	70% {
+		opacity: 1;
+		transform: translateY(25px);
+	}
+	85% {
+		opacity: 1;
+		transform: translateY(100px);
+	}
+	95% {
+		opacity: 1;
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(100px);
+	}
+}
+@keyframes slider {
+	0% {
+		background-image: url(icon/pic1.jpg);
+	}
+	20% {
+		background-image: url(icon/pic1.jpg);
+	}
+	25% {
+		background-image: url(icon/pic2.jpg);
+	}
+	45% {
+		background-image: url(icon/pic2.jpg);
+	}
+	50% {
+		background-image: url(icon/pic3.jpg);
+	}
+	70% {
+		background-image: url(icon/pic3.jpg);
+	}
+	75% {
+		background-image: url(icon/pic4.jpg);
+	}
+	95% {
+		background-image: url(icon/pic4.jpg);
+	}
+}
+
+header {
+	font-size: 34px;
+	margin-bottom: 50px;
+	position: relative;
+}
+header > h1 {
+	margin: 5px;
+	text-align: right;
+}
+header > h2 {
+	margin: 30px auto 10px;
+	font-size: 18px;
+	/*    font-style: italic;*/
+	text-align: right;
+	font-weight: normal;
+}
+
+.buy {
+	text-align: center;
+	padding: 120px 0px;
+}
+.buy > span {
+	background-color: #000;
+	font-size: 24px;
+	padding: 20px 55px;
+	border: 5px solid #1e246d;
+	border-radius: 78px;
+	animation: color 4s infinite;
+	text-transform: uppercase;
+	letter-spacing: 1.7px;
+	cursor: pointer;
+}
+.more > span {
+	display: inline-block;
+	animation: color 4s infinite, dvizh 2s infinite;
+}
+
+.line {
+	display: flex;
+}
+.line img {
+	width: 300px;
+	height: 100%;
+}
+.line p {
+	margin: auto 20px;
+	font-size: 18px;
+}
+.line h2 {
+	margin: 20px;
+}
+
+.load {
+	text-align: center;
+	padding: 120px 0px;
+}
+.load > span {
+	background-color: #000;
+	font-size: 24px;
+	padding: 20px 55px;
+	border: 5px solid #fdc424;
+	border-radius: 78px;
+	text-transform: uppercase;
+	letter-spacing: 1.7px;
+	cursor: pointer;
+	animation: color 4s infinite;
+}
+.load > span > span {
+	padding-left: 40px;
+}
+.load img {
+	width: 50px;
+	vertical-align: middle;
+	animation: round 2s infinite linear;
+}
+.stepload img {
+	animation: round 1s infinite steps(8);
+}
+
+.pic2 {
+	width: 350px;
+	height: 350px;
+	margin: auto;
+	background-image: url(icon/pic1.jpg);
+	background-size: 100%;
+	background-position: 50% 50%;
+	border: 3px solid;
+	animation: slider 6s infinite;
+}
+
+.pic {
+	height: 350px;
+	margin: auto -100px 100px;
+	background-image: url(icon/bg2.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+	position: relative;
+	text-align: center;
+}
+.pic > span {
+	opacity: 0;
+	display: inline-block;
+	transform: translateY(100px);
+	transform: scaleY(1);
+	position: relative;
+	z-index: 3;
+	font-family: "Century Gothic";
+	font-size: 114px;
+	font-weight: bold;
+}
+
+.pic:hover span:nth-of-type(1) {
+	animation: jump 1s forwards;
+}
+.pic:hover span:nth-of-type(2) {
+	animation: jump 1s 0.05s forwards;
+}
+.pic:hover span:nth-of-type(3) {
+	animation: jump 1s 0.1s forwards;
+}
+.pic:hover span:nth-of-type(4) {
+	animation: jump 1s 0.15s forwards;
+}
+.pic:hover span:nth-of-type(5) {
+	animation: jump 1s 0.2s forwards;
+}
+.pic:hover span:nth-of-type(6) {
+	animation: jump 1s 0.25s forwards;
+}
+.pic:hover span:nth-of-type(7) {
+	animation: jump 1s 0.3s forwards;
+}
+.pic:hover span:nth-of-type(8) {
+	animation: jump 1s 0.35s forwards;
+}
+.pic:hover span:nth-of-type(9) {
+	animation: jump 1s 0.4s forwards;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+}
+footer p {
+	padding-left: 50px;
+}
+.call {
+	width: 100px;
+	height: 100px;
+	padding: 15px 10px 10px;
+	box-sizing: border-box;
+	background-color: #000;
+	border: #fdf598 5px solid;
+	text-align: center;
+	border-radius: 100%;
+	animation: color 4s infinite;
+	cursor: pointer;
+}
+.call > img {
+	width: 60px;
+	animation: call 2s infinite linear;
+}
